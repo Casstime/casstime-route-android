@@ -11,11 +11,10 @@ import com.alibaba.android.arouter.facade.template.IInterceptor;
  * Created by WenChang Mai on 2019/1/31 10:04.
  * Description:
  */
-@Interceptor(priority = 8, name = "测试用拦截器")
+@Interceptor(priority = 0, name = "测试用拦截器")
 public class TestInterceptor implements IInterceptor {
     @Override
     public void process(Postcard postcard, InterceptorCallback callback) {
-        postcard.getUri();
         callback.onContinue(postcard);
     }
 
