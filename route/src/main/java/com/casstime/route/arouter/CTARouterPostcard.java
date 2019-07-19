@@ -571,19 +571,19 @@ public class CTARouterPostcard implements ICTPostcard {
         @Override
         public void onLost(Postcard postcard) {
             if (callback == null) return;
-            callback.onFound(new CTARouterPostcard(postcard));
+            callback.onLost(new CTARouterPostcard(postcard));
         }
 
         @Override
         public void onArrival(Postcard postcard) {
             if (callback == null) return;
-            callback.onFound(new CTARouterPostcard(postcard));
+            callback.onArrival(new CTARouterPostcard(postcard));
         }
 
         @Override
         public void onInterrupt(Postcard postcard) {
             if (callback == null) return;
-            callback.onFound(new CTARouterPostcard(postcard));
+            callback.onInterrupt(new CTARouterPostcard(postcard));
         }
     }
 
